@@ -1,0 +1,14 @@
+services:
+  rocky-systemd:
+    build:
+      context: .
+    container_name: rocky-systemd
+    image: rocky-systemd
+    privileged: true
+    # cap_add:
+    #   - "SYS_ADMIN"
+    volumes:
+    - type: bind
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      read_only: true
