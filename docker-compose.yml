@@ -3,7 +3,7 @@ services:
     build:
       context: .
     container_name: rocky-systemd
-    image: rocky-systemd
+    image: ghcr.io/hyper-w/systemd-containers/rocky-systemd
     privileged: true
     # cap_add:
     #   - "SYS_ADMIN"
